@@ -1,0 +1,20 @@
+
+<html>
+<head>
+	<title>Properties</title>
+</head>
+<body>
+	<p>Search results</p>
+
+	{% if found_entries %}
+   {% for i in found_entries %}
+        <h1><a href="{% url 'detailed_listing' pk=i.pk %}">{{ i.heading }}</a></h1>
+        		<p>{{suburb}}</p>
+        		<p>{{bedrooms}}</p>
+        		<p>{{ i.desc|linebreaksbr }}</p>
+        		<p>R{{ i.price }}</p>
+        		<img src="{{ i.model_pic }}foo.jpg">
+   {% endfor %}
+{% endif %}
+</body>
+</html>

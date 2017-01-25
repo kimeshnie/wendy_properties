@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Wendy Properties</title>
+    </head>
+    <body>
+        <nav class="navigation-bar">
+            <div class ="navigation-container">
+                <img class="logo" src="{% static 'img/logo.jpg' %}"> 
+                <ul>
+                    <li>
+                        <a href="#Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="properties.html">Properties</a>
+                    </li>
+                    <li>
+                        <a href="#news">News</a>
+                    </li>
+                    <li>
+                        <a href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <p>Featured</p>
+        {%for i in featured_listings%}
+            <div>
+                <h1><a href="">{{ i.heading }}</a></h1>
+                <p>{{ i.desc}}</p>
+                <p>R{{ i.price }}</p>
+            </div>
+        {% endfor %}
+
+        <div>
+            <form class=" " method="get" action= "{% url 'search_for_something' %}" >
+    <input name="q" id="id_q" type="text" class="form-control" placeholder="Search" />
+    <button type="submit">Search</button>
+</form>
+        </div>
+
+       <!-- <div>
+            <form action="." method="get">
+                Suburb: <input type="text" name="suburb" id="suburb"><br>
+                Bedrooms: <input type="number" name="bedrooms" id="bedrooms"><br>
+                Price: <label for="rangeinput">Range</label> <input id="rangeinput" type="range" min="100000" max="9999999" step="50000" value="100000"onchange="rangevalue.value=value"></input> <output id="range">100000</output>
+                <button id="search_submit" type="submit" >Search</button>
+            </form> 
+        </div>-->
+    </body>
+</html>

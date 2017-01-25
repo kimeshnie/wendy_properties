@@ -1,0 +1,41 @@
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 120px; /* change it to desired width */
+    background-color: white; /* change to desired color */
+}
+
+.navigation-container{
+    width: 940px;
+    display: inline-block;
+}
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0px;
+    margin-top: 20px;    /* if you want it vertically middle of the navbar. */
+}
+.navigation-bar ul  {
+
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    margin-right: 170px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #007261;
+}
+
+.header_image{
+    display: inline-block;
+    vertical-align: top;
+    width:100%;
+}
+
+.h1{
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #007261;
+}
+}

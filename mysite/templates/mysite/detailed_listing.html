@@ -1,0 +1,31 @@
+
+<html>
+	<header>
+		<title></title>
+	</header>
+	<body>
+
+		<div>
+			<h1> {{ details.heading }}</h1>
+        	<img src="{{ details.model_pic }}.jpg">
+        	<p>bedrooms: {{ details.bedrooms }}</p>
+        	<p>Suburb: {{ details.suburb }}</p>
+        	<p>R{{ details.price }}</p>
+        	<p>{{ details.desc|linebreaksbr }}</p>
+    	</div>
+
+    	<!--<div>
+			{% block title %}Contact - {{ block.super }}{% endblock %}
+
+			{% block content %}
+			<h1>Contact</h1>
+			<form role="form" action="" method="post">
+   			{% csrf_token %}
+    		{{ contact_details.as_p }}
+    		<button type="submit">Submit</button>-->
+</form>
+{% endblock %}
+    	</div>
+	</body>
+</html>    
+
